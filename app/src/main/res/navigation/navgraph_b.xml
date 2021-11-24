@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph_b"
+    app:startDestination="@id/testingFragmentB1">
+    <fragment
+        android:id="@+id/testingFragmentB1"
+        android:name="com.rohyme.testingmultiblebackstack.tetingFragmentB.TestingFragmentB1"
+        android:label="TestingFragmentB1">
+        <action
+            android:id="@+id/action_testingFragmentB1_to_testingFragmentB2"
+            app:destination="@id/testingFragmentB2" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="app://navigate_to_app/b1" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : B1" />
+    </fragment>
+    <fragment
+        android:id="@+id/testingFragmentB2"
+        android:name="com.rohyme.testingmultiblebackstack.tetingFragmentB.TestingFragmentB2"
+        android:label="TestingFragmentB2">
+        <action
+            android:id="@+id/action_testingFragmentB2_to_testingFragmentB3"
+            app:destination="@id/testingFragmentB3" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="app://navigate_to_app/b2" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : B2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/testingFragmentB3"
+        android:name="com.rohyme.testingmultiblebackstack.tetingFragmentB.TestingFragmentB3"
+        android:label="TestingFragmentB3">
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="app://navigate_to_app/b3" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : B3" />
+    </fragment>
+</navigation>

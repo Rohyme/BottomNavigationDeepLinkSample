@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph_a"
+    app:startDestination="@id/testingFragmentA1">
+    <fragment
+        android:id="@+id/testingFragmentA1"
+        android:name="com.rohyme.testingmultiblebackstack.testingFragmentA.TestingFragmentA1"
+        android:label="TestingFragmentA1">
+        <action
+            android:id="@+id/action_testingFragmentA1_to_testingFragmentA2"
+            app:destination="@id/testingFragmentA2" />
+        <deepLink
+            android:id="@+id/deepLink7"
+            app:uri="app://navigate_to_app/a1" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : A1" />
+    </fragment>
+    <fragment
+        android:id="@+id/testingFragmentA2"
+        android:name="com.rohyme.testingmultiblebackstack.testingFragmentA.TestingFragmentA2"
+        android:label="TestingFragmentA2">
+        <action
+            android:id="@+id/action_testingFragmentA2_to_testingFragmentA3"
+            app:destination="@id/testingFragmentA3" />
+        <deepLink
+            android:id="@+id/deepLink8"
+            app:uri="app://navigate_to_app/a2" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : A2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/testingFragmentA3"
+        android:name="com.rohyme.testingmultiblebackstack.testingFragmentA.TestingFragmentA3"
+        android:label="TestingFragmentA3">
+        <deepLink
+            android:id="@+id/deepLink10"
+            app:uri="app://navigate_to_app/a3" />
+        <argument
+            android:name="defaultArgument"
+            app:argType="string"
+            android:defaultValue="Default Argument : A3" />
+
+    </fragment>
+</navigation>
